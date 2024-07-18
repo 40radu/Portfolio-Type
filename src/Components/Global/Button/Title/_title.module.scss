@@ -1,0 +1,80 @@
+@import '../../../../app/mixins';
+
+.section_title {
+
+    width: fit-content;
+    height: fit-content;
+    @include flex (start, center, column);
+
+    h2 {
+        width: fit-content;
+        @include flex (start, center, column);
+        position: relative;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1.5px $black-35;
+        color: $white;
+        font-weight: 800;
+        height: 65px;
+        font-size: 55px;
+        letter-spacing: text-space(66, 7);
+        padding-right: 8px;
+        text-shadow: 4px 4px 1px $black-25;
+
+        @media (max-width : 320px) {
+            font-size: 53px;
+            height: 65px;
+        }
+    }
+
+    &__center {
+        column-gap: 10px;
+        padding: 0 8px 0 10px;
+        @include flex (space-between, center, row);
+        width: 100%;
+
+        &::before {
+            content: "";
+            border: 0;
+            width: 100%;
+            background-color: $gray-45;
+            border-bottom: 0.5px $blue-50;
+            border-style: dotted;
+            height: 4px;
+            padding-left: 8px;
+            width: 100%;
+        }
+
+        p {
+            width: fit-content;
+            text-wrap: nowrap;
+            font-weight: 400;
+            color: $blue-primary;
+            @include flex (center, center, row);
+            text-transform: capitalize;
+            height: fit-content;
+            font-size: 10px;
+            letter-spacing: text-space(10, 8);
+            column-gap: 8px;
+
+            &::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                background-color: $red;
+                border-radius: 20px 0;
+            }
+        }
+    }
+
+    .descri {
+        @include text-linear-primary;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-right: 15px;
+        font-size: 9px;
+        letter-spacing: text-space(9, 4);
+        margin-top: 15px;
+    }
+
+
+}
