@@ -1,0 +1,30 @@
+@import '../../../../app/mixins';
+
+.link_container {
+    text-decoration: none;
+    @include flex (center, center, row);
+    width: 100%;
+
+    p {
+        color: white;
+        -webkit-text-stroke: 1.5px $black-35;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 1px $black-35;
+        font-weight: 800;
+        font-size: 64px;
+        letter-spacing: text-space(64, 4);
+        height: 75px;
+
+        @media (max-width : 320px) {
+            font-size: 55px;
+        }
+    }
+
+    div {
+        border: solid 1px $black-35;
+        opacity: 0;
+        width: 12px;
+        height: 12px;
+        margin-top: 10px;
+    }
+}

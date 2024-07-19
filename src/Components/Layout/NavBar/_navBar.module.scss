@@ -1,0 +1,15 @@
+@import '../../../app/mixins';
+
+.navBar_container {
+    width: 100vw;
+    @include flex (space-between, center, row);
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    height: fit-content;
+    box-shadow: 0 0 3px 1px $black-25;
+    backdrop-filter: blur(1.5px);
+    padding: 0 16px 0 10px;
+}

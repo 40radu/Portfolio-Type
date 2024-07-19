@@ -1,0 +1,17 @@
+@import '../../../../app/mixins';
+
+.logo_container {
+    @include flex(center, center, row);
+    border: 1px dashed $black-25;
+    border-radius: 50%;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 18px;
+
+    img {
+        width: 46px;
+        height: 46px;
+        scale: 0.8;
+    }
+}
